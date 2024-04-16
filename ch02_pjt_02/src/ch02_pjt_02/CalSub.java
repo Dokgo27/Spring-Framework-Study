@@ -1,10 +1,12 @@
 package ch02_pjt_02;
 
-public class CalSub implements ICalculator{
+//ICalcultor 구현
+public class CalSub implements ICalculator{ // ICalculator 인터페이스 구현
 
 	@Override
 	public int doOperation(int firstNum, int secondNum) {
+		// TODO Auto-generated method stub
 		return firstNum - secondNum;
 	}
-	
+
 }

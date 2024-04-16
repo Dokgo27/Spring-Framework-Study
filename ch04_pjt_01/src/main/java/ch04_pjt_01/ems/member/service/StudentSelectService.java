@@ -4,25 +4,25 @@ import ch04_pjt_01.ems.member.Student;
 import ch04_pjt_01.ems.member.dao.StudentDao;
 
 public class StudentSelectService {
-
+	
 	private StudentDao studentDao;
 
 	public StudentSelectService(StudentDao studentDao) {
 		this.studentDao = studentDao;
 	}
-
+	
 	public Student select(String sNum) {
-		if (verify(sNum)) {
+		if(verify(sNum)) {
 			return studentDao.select(sNum);
-		} else {
-			System.out.println("Student infomaiton is available.");
+		}
+		else {
+			System.out.println("Student infomation is available.");
 		}
 		return null;
 	}
-
-	private boolean verify(String sNum) {
+	
+	public boolean verify(String sNum) {
 		Student student = studentDao.select(sNum);
 		return student != null ? true : false;
 	}
-
 }

@@ -7,20 +7,20 @@ public class CalAssembler {
 	CalMul calMul;
 	CalDiv calDiv;
 	
-	public CalAssembler() { // 생성자 생성 시 바로 계산할 수 있도록
+	public CalAssembler() {
 		calculator = new MyCalculator();
 		calAdd = new CalAdd();
 		calSub = new CalSub();
 		calMul = new CalMul();
 		calDiv = new CalDiv();
 		
-		assemble();
+		assemble(); // assemble()메소드 실행
 	}
 	
 	public void assemble() {
-		calculator.calculate(10, 5, new CalAdd());
-		calculator.calculate(10, 5, new CalSub());
-		calculator.calculate(10, 5, new CalMul());
-		calculator.calculate(10, 5, new CalDiv());
+		calculator.calculate(10, 5, calAdd); // 인터페이스 ICalculator 변수에 객체 주입
+		calculator.calculate(10, 5, calSub);
+		calculator.calculate(10, 5, calMul);
+		calculator.calculate(10, 5, calDiv);
 	}
 }

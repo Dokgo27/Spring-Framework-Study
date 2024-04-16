@@ -1,15 +1,20 @@
 package ch04_pjt_01.ems.member;
 
-public class Student {
+// 학생 정보를 담고 있음
+// sNum 필드: 학생을 구분하는 학번
+// 생성자에서 필드 초기화에 필요한 모든 값을 받음
+// 모든 필드에 대한 getter 와 setter 메서드를 가짐
 
-	private String sNum;
+public class Student {
+	
+	private String sNum; 
 	private String sId;
 	private String sPw;
 	private String sName;
 	private int sAge;
 	private char sGender;
 	private String sMajor;
-
+	
 	public Student(String sNum, String sId, String sPw, String sName, int sAge, char sGender, String sMajor) {
 		this.sNum = sNum;
 		this.sId = sId;
@@ -75,5 +80,4 @@ public class Student {
 	public void setsMajor(String sMajor) {
 		this.sMajor = sMajor;
 	}
-
 }

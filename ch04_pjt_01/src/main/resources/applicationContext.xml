@@ -3,7 +3,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="initSampleData"
 		class="ch04_pjt_01.ems.utils.InitSampleData">
@@ -21,7 +21,7 @@
 			<array>
 				<value>rabbit</value>
 				<value>hippo</value>
-				<value>raccoon3</value>
+				<value>raccoon</value>
 				<value>elephant</value>
 				<value>lion</value>
 			</array>
@@ -69,7 +69,7 @@
 
 		<property name="sMajors">
 			<array>
-				<value>Englist</value>
+				<value>English</value>
 				<value>Korean</value>
 				<value>French</value>
 				<value>Philosophy</value>
@@ -85,7 +85,7 @@
 		class="ch04_pjt_01.ems.member.service.StudentRegisterService">
 		<constructor-arg ref="studentDao" />
 	</bean>
-
+	
 	<bean id="studentModifyService"
 		class="ch04_pjt_01.ems.member.service.StudentModifyService">
 		<constructor-arg ref="studentDao" />
@@ -114,19 +114,12 @@
 	<bean id="dev_DBConnectionInfoDev"
 		class="ch04_pjt_01.ems.member.DBConnectionInfo">
 		<property name="url" value="000.000.000.000" />
-		<property name="userId" value="admin" />
-		<property name="userPw" value="0000" />
-	</bean>
-
-	<bean id="real_DBConnectionInfoDev"
-		class="ch04_pjt_01.ems.member.DBConnectionInfo">
-		<property name="url" value="111.111.111.111" />
 		<property name="userId" value="master" />
 		<property name="userPw" value="1111" />
 	</bean>
 
-	<bean id="eMSInfomationService"
-		class="ch04_pjt_01.ems.member.service.EMSInfomationService">
+	<bean id="eMSInformationService"
+		class="ch04_pjt_01.ems.member.service.EMSInformationService">
 
 		<property name="info">
 			<value>Education Management System program was developed in 2022.
@@ -134,8 +127,8 @@
 		</property>
 
 		<property name="copyRight">
-			<value>COPYRIGHT(c) 2022 EMS CO., LTD. ALL RIGHT RESERVED. CONTACT
-				MASTER FOR MORE INFORMATION.
+			<value>COPYRIGHT(C) 2022 EMS CO., LTD. ALL RIGHT RESERVED. CONTACT
+				MASTER FOR MORE INFOMATION.
 			</value>
 		</property>
 
@@ -189,7 +182,7 @@
 					<key>
 						<value>Jasper</value>
 					</key>
-					<value>Jasper@springPjt.org</value>
+					<value>jasper@springPjt.org</value>
 				</entry>
 			</map>
 		</property>
@@ -205,4 +198,7 @@
 			</map>
 		</property>
 	</bean>
+
+
+
 </beans>
