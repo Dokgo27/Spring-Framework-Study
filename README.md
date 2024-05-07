@@ -12,8 +12,7 @@
   <figcaption align="center">4. IOC 컨테이너</figcaption><br>
   <figcaption align="center">5. 의존 객체 자동 주입</figcaption><br>
   <figcaption align="center">6. @Configuration을 이용한 빈 생성</figcaption><br>
-  <figcaption align="center">7. 스프링 MVC를 이용한 웹 서비스 프로젝트</figcaption><br>
-  <figcaption align="center">8. Service와 DAO 구현</figcaption><br>
+
   <figcaption align="center"></figcaption><br>
 </p>
 
